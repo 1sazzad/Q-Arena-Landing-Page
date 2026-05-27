@@ -18,3 +18,5 @@ export const contact = {
   partnership: 'partnerships@qarena.app',
   location: 'Bangladesh / Global education support'
 }
+
+export const productUrl = 'https://qarena.me'

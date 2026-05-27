@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
+import { productUrl } from '../data/platformData'
 
 export default function Footer(){
   const currentYear = new Date().getFullYear()
@@ -18,6 +19,7 @@ export default function Footer(){
               <li><a href="#services" className="text-slate-600 hover:text-brand-600 transition-colors">Services</a></li>
               <li><a href="#tech" className="text-slate-600 hover:text-brand-600 transition-colors">Technology</a></li>
               <li><a href="#infrastructure" className="text-slate-600 hover:text-brand-600 transition-colors">Infrastructure</a></li>
+              <li><a href={productUrl} target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-brand-600 transition-colors">Live Platform</a></li>
             </ul>
           </div>
           <div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { productUrl } from '../data/platformData'
 
 const cloudBenefits = [
   {
@@ -37,6 +38,7 @@ export default function CloudCreditSection(){
         <span className="inline-block px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-sm font-medium text-orange-700 mb-4">Partnership</span>
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">We're seeking cloud infrastructure support</h2>
         <p className="text-lg text-slate-600 max-w-3xl">We're actively reaching out to cloud providers like Microsoft for Startups, AWS Activate, Google Cloud, and other technology partners to help us scale affordably.</p>
+        <p className="mt-4 text-sm text-slate-500">Live product: <a href={productUrl} target="_blank" rel="noopener noreferrer" className="text-brand-700 hover:text-brand-800 font-medium">https://qarena.me</a></p>
       </motion.div>
       
       <div className="grid gap-6 sm:grid-cols-2 mb-12">
@@ -65,12 +67,17 @@ export default function CloudCreditSection(){
       >
         <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Ready to partner with us?</h3>
         <p className="text-slate-600 mb-6 max-w-2xl mx-auto">If you represent a cloud provider or technology partner interested in supporting affordable education infrastructure, we'd love to hear from you.</p>
-        <a href="#contact" className="btn-primary inline-flex">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={productUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex justify-center">
+            <span>Explore Q Arena Live</span>
+          </a>
+          <a href="#contact" className="btn-primary inline-flex justify-center">
           <span>Let's Connect</span>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
-        </a>
+          </a>
+        </div>
       </motion.div>
     </section>
   )

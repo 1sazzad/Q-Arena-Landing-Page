@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Logo from '../assets/logo.svg'
+import { productUrl } from '../data/platformData'
 
 export default function Hero(){
   return (
@@ -46,6 +47,12 @@ export default function Hero(){
           >
             <a href="#contact" className="btn-primary justify-center sm:justify-start">
               <span>Request Demo</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a href={productUrl} target="_blank" rel="noopener noreferrer" className="btn-primary justify-center sm:justify-start bg-brand-700 hover:bg-brand-800">
+              <span>View Live Product</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

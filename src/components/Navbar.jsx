@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
+import { productUrl } from '../data/platformData'
 
 export default function Navbar(){
   return (
@@ -14,15 +15,16 @@ export default function Navbar(){
           <a href="#infrastructure" className="text-sm font-medium hover:text-brand-600 transition-colors">Infrastructure</a>
           <a href="#impact" className="text-sm font-medium hover:text-brand-600 transition-colors">Impact</a>
           <a href="#contact" className="text-sm font-medium hover:text-brand-600 transition-colors">Contact</a>
+          <a href={productUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm">
+            Visit Live Platform
+          </a>
           <a href="#cloud" className="ml-4 btn-primary text-sm">Support Infrastructure</a>
         </nav>
         {/* Mobile menu button placeholder */}
         <div className="md:hidden">
-          <button className="p-2 hover:bg-slate-100 rounded-lg transition-colors">
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <a href={productUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary text-xs px-3 py-2 mr-2 inline-flex items-center">
+            Visit Live Platform
+          </a>
         </div>
       </div>
     </header>

@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { contact } from '../data/platformData'
+import { contact, productUrl } from '../data/platformData'
 
 const contactInfo = [
   { label: 'Founder / Team', value: contact.team, icon: '👥' },
   { label: 'Email', value: contact.email, icon: '✉️' },
   { label: 'Partnership', value: contact.partnership, icon: '🤝' },
-  { label: 'Location', value: contact.location, icon: '📍' }
+  { label: 'Location', value: contact.location, icon: '📍' },
+  { label: 'Product Website', value: 'qarena.me', icon: '🌐' }
 ]
 
 export default function ContactSection(){
@@ -22,6 +23,7 @@ export default function ContactSection(){
         <span className="inline-block px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-sm font-medium text-slate-700 mb-4">Contact</span>
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Get in touch</h2>
         <p className="text-lg text-slate-600 max-w-3xl">Interested in Q Arena? Want to partner with us or support our mission? We'd love to hear from you. Update the contact information below when you're ready to accept partnerships and inquiries.</p>
+        <p className="mt-4 text-sm text-slate-500">Live product: <a href={productUrl} target="_blank" rel="noopener noreferrer" className="text-brand-700 hover:text-brand-800 font-medium">https://qarena.me</a></p>
       </motion.div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-8">
