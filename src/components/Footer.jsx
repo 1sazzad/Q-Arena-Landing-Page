@@ -1,0 +1,52 @@
+import React from 'react'
+import Logo from '../assets/logo.svg'
+
+export default function Footer(){
+  const currentYear = new Date().getFullYear()
+  
+  return (
+    <footer className="border-t border-slate-200 mt-16 py-12 md:py-16 bg-gradient-to-b from-white to-slate-50">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-8 md:grid-cols-4 mb-8">
+          <div>
+            <img src={Logo} alt="Q Arena" className="mb-4" style={{ height: '32px' }} />
+            <p className="text-sm text-slate-600">AI-powered exam preparation for accessible learning.</p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide">Product</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#services" className="text-slate-600 hover:text-brand-600 transition-colors">Services</a></li>
+              <li><a href="#tech" className="text-slate-600 hover:text-brand-600 transition-colors">Technology</a></li>
+              <li><a href="#infrastructure" className="text-slate-600 hover:text-brand-600 transition-colors">Infrastructure</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#impact" className="text-slate-600 hover:text-brand-600 transition-colors">Impact</a></li>
+              <li><a href="#contact" className="text-slate-600 hover:text-brand-600 transition-colors">Contact</a></li>
+              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">Privacy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide">Connect</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">Twitter</a></li>
+              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">LinkedIn</a></li>
+              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-slate-500">© {currentYear} Q Arena. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-slate-500">
+            <a href="#" className="hover:text-slate-900 transition-colors">Terms</a>
+            <a href="#" className="hover:text-slate-900 transition-colors">Privacy</a>
+            <a href="#" className="hover:text-slate-900 transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
