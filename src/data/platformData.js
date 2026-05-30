@@ -14,9 +14,15 @@ export const services = [
 
 export const contact = {
   team: 'Q Arena Team',
-  email: 'hello@qarena.app',
-  partnership: 'partnerships@qarena.app',
+  email: 'founder@qarena.me',
+  partnership: 'founder@qarena.me',
   location: 'Bangladesh / Global education support'
+}
+
+export const founder = {
+  name: 'Md Sazzad Hossain',
+  title: 'Founder, Q Arena',
+  email: 'founder@qarena.me'
 }
 
 export const productUrl = 'https://qarena.me'

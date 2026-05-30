@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { contact, productUrl } from '../data/platformData'
+import { contact, productUrl, founder } from '../data/platformData'
 
 const contactInfo = [
   { label: 'Founder / Team', value: contact.team, icon: '👥' },
@@ -27,6 +27,22 @@ export default function ContactSection(){
       </motion.div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="card p-6 hover:border-brand-200 hover:shadow-lg transition-all"
+        >
+          <div className="text-3xl mb-3">👤</div>
+          <div className="text-sm font-medium text-slate-500 mb-2">Founder</div>
+          <div className="font-bold text-slate-900 text-lg">{founder.name}</div>
+          <div className="text-sm text-slate-600 mt-1">{founder.title}</div>
+          <div className="mt-3">
+            <a href={`mailto:${founder.email}`} className="text-brand-700 hover:text-brand-800 font-medium">{founder.email}</a>
+          </div>
+        </motion.div>
+
         {contactInfo.map((info, i) => (
           <motion.div 
             key={i}

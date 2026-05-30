@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
-import { productUrl } from '../data/platformData'
+import { productUrl, founder } from '../data/platformData'
 
 export default function Footer(){
   const currentYear = new Date().getFullYear()
@@ -12,6 +12,7 @@ export default function Footer(){
           <div>
             <img src={Logo} alt="Q Arena" className="mb-4" style={{ height: '32px' }} />
             <p className="text-sm text-slate-600">AI-powered exam preparation for accessible learning.</p>
+            <div className="text-sm text-slate-600 mt-3">Contact: <a href={`mailto:${founder.email}`} className="font-medium text-slate-800 hover:text-brand-600">{founder.email}</a></div>
           </div>
           <div>
             <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide">Product</h4>
@@ -36,6 +37,7 @@ export default function Footer(){
               <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">Twitter</a></li>
               <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">LinkedIn</a></li>
               <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">GitHub</a></li>
+              <li><a href={`mailto:${founder.email}`} className="text-slate-600 hover:text-brand-600 transition-colors">Investor Contact</a></li>
             </ul>
           </div>
         </div>
