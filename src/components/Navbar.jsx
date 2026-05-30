@@ -11,9 +11,12 @@ export default function Navbar(){
         </div>
         <nav className="hidden md:flex items-center gap-8 text-slate-700">
           <a href="#problem" className="text-sm font-medium hover:text-brand-600 transition-colors">Problem</a>
+          <a href="#demo" className="text-sm font-medium hover:text-brand-600 transition-colors">Demo</a>
+          <a href="#video" className="text-sm font-medium hover:text-brand-600 transition-colors">Video</a>
           <a href="#services" className="text-sm font-medium hover:text-brand-600 transition-colors">Services</a>
-          <a href="#infrastructure" className="text-sm font-medium hover:text-brand-600 transition-colors">Infrastructure</a>
-          <a href="#impact" className="text-sm font-medium hover:text-brand-600 transition-colors">Impact</a>
+          <a href="#founder" className="text-sm font-medium hover:text-brand-600 transition-colors">Founder</a>
+          <a href="#roadmap" className="text-sm font-medium hover:text-brand-600 transition-colors">Roadmap</a>
+          <a href="#faq" className="text-sm font-medium hover:text-brand-600 transition-colors">FAQ</a>
           <a href="#contact" className="text-sm font-medium hover:text-brand-600 transition-colors">Contact</a>
           <a href={productUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm">
             Visit Live Platform

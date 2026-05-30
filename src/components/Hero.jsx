@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Logo from '../assets/logo.svg'
-import { productUrl, founder } from '../data/platformData'
+import { productUrl } from '../data/platformData'
+import { contact } from '../data/landingDemoData'
 
 export default function Hero(){
   return (
@@ -60,7 +61,7 @@ export default function Hero(){
             <a href="#cloud" className="btn-secondary justify-center sm:justify-start">
               <span>Support Our Mission</span>
             </a>
-            <a href={`mailto:${founder.email}`} className="btn-secondary justify-center sm:justify-start">
+            <a href={`mailto:${contact.email}`} className="btn-secondary justify-center sm:justify-start">
               <span>Investor Contact</span>
             </a>
           </motion.div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { productUrl, founder } from '../data/platformData'
+import { productUrl } from '../data/platformData'
+import { contact } from '../data/landingDemoData'
 
 const cloudBenefits = [
   {
@@ -39,7 +40,7 @@ export default function CloudCreditSection(){
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">We're seeking cloud infrastructure support</h2>
         <p className="text-lg text-slate-600 max-w-3xl">We're actively reaching out to cloud providers like Microsoft for Startups, AWS Activate, Google Cloud, and other technology partners to help us scale affordably.</p>
         <p className="mt-4 text-sm text-slate-500">Live product: <a href={productUrl} target="_blank" rel="noopener noreferrer" className="text-brand-700 hover:text-brand-800 font-medium">https://qarena.me</a></p>
-        <p className="mt-4 text-sm text-slate-500">Q Arena is an AI-first exam preparation platform focused on AI Answer Generation, Subject-Based Question Bank, and Admin Content Upload & Management. We are preparing to scale AI inference, question indexing, content storage, and backend infrastructure using cloud services. For partnership, investor, or cloud credit inquiries, contact <a href={`mailto:${founder.email}`} className="text-brand-700 hover:text-brand-800 font-medium">{founder.email}</a>.</p>
+        <p className="mt-4 text-sm text-slate-500">Q Arena is an AI-first exam preparation platform focused on AI Answer Generation, Subject-Based Question Bank, and Admin Content Upload & Management. We are preparing to scale AI inference, question indexing, content storage, and backend infrastructure using cloud services. Q Arena is cloud-ready and seeking startup cloud credit support to make AI-powered learning more accessible. For partnership, investor, or cloud credit inquiries, contact <a href={`mailto:${contact.email}`} className="text-brand-700 hover:text-brand-800 font-medium">{contact.email}</a>.</p>
       </motion.div>
       
       <div className="grid gap-6 sm:grid-cols-2 mb-12">
@@ -78,7 +79,7 @@ export default function CloudCreditSection(){
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <a href={`mailto:${founder.email}`} className="btn-secondary inline-flex justify-center">
+          <a href={`mailto:${contact.email}?subject=${encodeURIComponent('Cloud Credit Inquiry for Q Arena')}`} className="btn-secondary inline-flex justify-center">
             <span>Partnership & Cloud Credit Inquiry</span>
           </a>
         </div>

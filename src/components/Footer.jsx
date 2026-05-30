@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
-import { productUrl, founder } from '../data/platformData'
+import { productUrl } from '../data/platformData'
+import { founder } from '../data/landingDemoData'
 
 export default function Footer(){
   const currentYear = new Date().getFullYear()
@@ -28,15 +29,16 @@ export default function Footer(){
             <ul className="space-y-2 text-sm">
               <li><a href="#impact" className="text-slate-600 hover:text-brand-600 transition-colors">Impact</a></li>
               <li><a href="#contact" className="text-slate-600 hover:text-brand-600 transition-colors">Contact</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">Privacy</a></li>
+              <li><a href="/terms" className="text-slate-600 hover:text-brand-600 transition-colors">Terms</a></li>
+              <li><a href="/terms" className="text-slate-600 hover:text-brand-600 transition-colors">Terms</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide">Connect</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">Twitter</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-brand-600 transition-colors">GitHub</a></li>
+              <li><a href={`mailto:${founder.email}`} className="text-slate-600 hover:text-brand-600 transition-colors">Email Founder</a></li>
+              <li><a href={productUrl} target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-brand-600 transition-colors">Live Product</a></li>
+              <li><a href="/privacy" className="text-slate-600 hover:text-brand-600 transition-colors">Privacy</a></li>
               <li><a href={`mailto:${founder.email}`} className="text-slate-600 hover:text-brand-600 transition-colors">Investor Contact</a></li>
             </ul>
           </div>
@@ -45,9 +47,8 @@ export default function Footer(){
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-500">© {currentYear} Q Arena. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-slate-500">
-            <a href="#" className="hover:text-slate-900 transition-colors">Terms</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Cookies</a>
+            <a href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-slate-900 transition-colors">Terms</a>
           </div>
         </div>
       </div>

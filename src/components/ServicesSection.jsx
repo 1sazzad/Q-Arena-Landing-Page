@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { services } from '../data/platformData'
+import { coreServices } from '../data/landingDemoData'
 import * as Icons from 'lucide-react'
 
 function Icon({name}){
@@ -18,15 +18,15 @@ export default function ServicesSection(){
         viewport={{ once: true }}
         className="mb-12"
       >
-        <span className="inline-block px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-sm font-medium text-brand-700 mb-4">Features</span>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Powerful features for smarter studying</h2>
-        <p className="text-lg text-slate-600 max-w-3xl">Everything students need to prepare effectively, all integrated into one intelligent platform.</p>
+        <span className="inline-block px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-sm font-medium text-brand-700 mb-4">Core Services</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">The three core services Q Arena is built around</h2>
+        <p className="text-lg text-slate-600 max-w-3xl">The landing page now focuses on the product's main value: AI answer generation, subject-based question access, and admin-controlled content growth.</p>
       </motion.div>
       
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s, i) => (
+      <div className="grid gap-6 lg:grid-cols-3">
+        {coreServices.map((s, i) => (
           <motion.div 
-            key={s.key}
+            key={s.title}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -37,7 +37,8 @@ export default function ServicesSection(){
               <Icon name={s.icon} />
             </div>
             <h3 className="font-bold text-slate-900 mb-2">{s.title}</h3>
-            <p className="text-sm text-slate-600 leading-relaxed">{s.desc}</p>
+            <p className="text-sm text-slate-600 leading-relaxed">{s.description}</p>
+            <div className="mt-4 text-xs uppercase tracking-wide text-slate-500 font-semibold">{s.note}</div>
           </motion.div>
         ))}
       </div>
